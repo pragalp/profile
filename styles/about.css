@@ -1,0 +1,518 @@
+/* CONTACT BUTTON  */
+.about-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-name {
+    font-size: 28px;
+}
+
+.nav-item a {
+    color: black !important;
+}
+
+button {
+    --primary-color: #177992;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}
+
+/* skill button  */
+.skills-container .list {
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.skills-container .list span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #7e97b8;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+.skills-container .list span:hover {
+    cursor: pointer;
+    color: #516d91;
+    background-color: #E5EDF5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+.skills-container .list span:active {
+    box-shadow: none;
+}
+
+.skills-container .list span img {
+    width: 20px;
+}
+
+.section-title span {
+    background: -webkit-linear-gradient(45deg, #FF4433, #5D3FD3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* About Me grid info  */
+.about__grid {
+    text-align: justify;
+    padding: 0 25px;
+}
+
+/* Social Link Section  */
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+
+.social-button {
+    width: 250px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #7e97b8;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.list a img {
+    width: 35px;
+    height: 35px;
+    transition: 0.5s ease;
+}
+
+.list a img:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: 0.5s ease;
+}
+
+
+/* Social Link Section End */
+@media screen and (min-width:300px) {
+    .skills-container .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container .list span p {
+        display: none;
+    }
+}
+
+@media screen and (min-width:450px) {
+    .skills-container .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-container .list span p {
+        display: block;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .skills-container .list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__grid {
+        text-align: justify;
+        padding: 0 85px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .skills-container .list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* media query  */
+@media screen and (min-width:300px) {
+    .about-skill-content {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .about-skill-content {
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .social-button {
+        width: 250px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .list a img {
+        width: 25px;
+        height: 25px;
+        transition: 0.5s ease;
+    }
+
+
+}
+
+
+/* BENTO STYLE  */
+
+.bento-section {
+    background: linear-gradient(to bottom right, #f3e8ff, #fdf2f8, #e0e7ff);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    margin: 3rem auto;
+    max-width: 1400px;
+    font-family: "Outfit", sans-serif;
+}
+
+.bento-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #ef469e, #177992, #ef469e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 100px;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 140px;
+    }
+
+    .bento-section {
+        padding: 2rem 10rem;
+    }
+
+    .bento-box img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+.bento-box {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.bento-box:hover {
+    transform: scale(1.05);
+}
+
+.bento-box img {
+    border-radius: 1%;
+    width: 130px !important;
+    height: 260px !important;
+    object-fit: cover;
+}
+
+.bento-box.white {
+    background: #fff;
+    color: #333;
+}
+
+.bento-box.purple {
+    background: linear-gradient(to bottom right, #8b5cf6, #4338ca);
+}
+
+.bento-box.pink {
+    background: linear-gradient(to bottom right, #f472b6, #9333ea);
+}
+
+.bento-box.indigo {
+    background: linear-gradient(to bottom right, #6366f1, #7c3aed);
+}
+
+.bento-box.teal {
+    background: linear-gradient(to bottom right, #34d399, #0d9488);
+}
+
+.bento-box.rose {
+    background: linear-gradient(to bottom right, #fb7185, #ec4899);
+}
+
+.bento-box.orange {
+    background: linear-gradient(to bottom right, #fbbf24, #f97316);
+    color: black;
+}
+
+.bento-box.cyan {
+    background: linear-gradient(to bottom right, #06b6d4, #2563eb);
+}
+
+.bento-social a {
+    color: white;
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+    transition: transform 0.3s;
+}
+
+.bento-social a:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width:540px) {
+    .orange {
+        grid-column: span 1 !important;
+    }
+
+    .cyan {
+        grid-column: span 2 !important;
+        flex-direction: row !important;
+        gap: 15px !important;
+    }
+
+    .bento-box img {
+        border-radius: 1%;
+        width: 100px !important;
+        height: 150px !important;
+        object-fit: cover;
+
+    }
+
+}
+
+/* BENTO END  */
+
+
+/* TIMELINE SECTION  */
+.timeline-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+
+
+/* Timeline */
+.timeline {
+    position: relative;
+    border-left: 3px solid #d1d5db;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.timeline li {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Dots perfectly centered */
+.timeline li .dot {
+    position: absolute;
+    left: -40px;
+    /* perfectly centers on the 3px border */
+    top: 0.6em;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px #d1d5db;
+}
+
+/* Colors */
+.dot.blue {
+    background: #3b82f6;
+}
+
+.dot.green {
+    background: #10b981;
+}
+
+.dot.purple {
+    background: #8b5cf6;
+}
+
+.dot.pink {
+    background: #ec4899;
+}
+
+.dot.yellow {
+    background: #f59e0b;
+}
+
+.dot.red {
+    background: #ef4444;
+}
+
+/* Text Elements */
+.timeline time {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.timeline h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 4px 0;
+    transition: color 0.3s ease;
+}
+
+.timeline li:hover h3 {
+    color: #2563eb;
+}
+
+.timeline p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.timeline p span {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .timeline-section {
+        padding: 20px 10px;
+    }
+
+    .timeline-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline p {
+        font-size: 0.9rem;
+    }
+}
