@@ -8,6 +8,13 @@
     <link rel="icon" href="images/log.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="stylesheet" href="styles/style.css">
+
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+            <script type="text/javascript">
+              (function() {
+              emailjs.init("*************");
+              })(); 
+    </script>
 </head>
 
 <body>
@@ -58,7 +65,7 @@
         </h2>
 
         <div class="contact-page container grid">
-            <form action="" class="contact-form grid" id="contact-form">
+            <form action="" class="contact-form grid" >
                 <div class="contact-group grid">
                     <div class="contact-box">
                         <input type="text" name="user-name" id="name" required placeholder="Write Your Name"
@@ -79,7 +86,7 @@
                     </div>
 
                     <p class="contact-message" id="contact-message">Message status</p>
-                    <button type="submit" class="contact-send btn">Send Message</button>
+                    <button onclick="Sendemail">Send Message</button>
                 </div>
             </form>
         </div>
@@ -139,7 +146,7 @@
 
 
     <!-- SCRIPT FILES  -->
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
 <script src="js/index.js"></script>
 <script src="js/contact.js"></script>
 

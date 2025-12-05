@@ -1,12 +1,16 @@
-emailjs.init("ebnziiJkiOu7-iK4G");
+ function sendemail(){
 
-const contactForm = document.getElementById('contact-form');
-const contactMessage = document.getElementById('contact-message');
+	var email=document.getElementById("email").value;
+	var from_name=document.getElementById("name").value;
+	var message=document.getElementById("message").value;
 
-const sendEmail = (e) => {
-    e.preventDefault();
+	var templateParams = {
+        email: email,
+        from_name: from_name,
+		message: message
+      };
 
-    emailjs.sendForm('service_zlaejj5', 'template_13too8j', '#contact-form', 'ebnziiJkiOu7-iK4G')
+    emailjs.sendForm('service_zlaejj5', 'template_13too8j', '', 'ebnziiJkiOu7-iK4G')
         .then(() => {
             contactMessage.textContent = '✅ Message sent successfully!';
             contactMessage.className = 'contact-message show success';
@@ -26,6 +30,6 @@ const sendEmail = (e) => {
                 contactMessage.textContent = '';
             }, 5000);
         });
-};
 
-contactForm.addEventListener('submit', sendEmail);
+
+    }
