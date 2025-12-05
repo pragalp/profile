@@ -12,7 +12,7 @@
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
             <script type="text/javascript">
               (function() {
-              emailjs.init("*************");
+              emailjs.init("ebnziiJkiOu7-iK4G");
               })(); 
     </script>
 </head>
@@ -57,40 +57,56 @@
         </nav>
     </header>
 
-    <!-----===============CONTACT FORM=============--->
-    <section class="contact section contact-section">
-        <h2 class="section-title">
-            Let's Talk <br>
-            About Your Project
-        </h2>
+   <!-- CONTACT SECTION -->
+<section class="contact section contact-section">
+  <h2 class="section-title">
+    Let's Talk <br>
+    About Your Project
+  </h2>
 
-        <div class="contact-page container grid">
-            <form action="" class="contact-form grid" >
-                <div class="contact-group grid">
-                    <div class="contact-box">
-                        <input type="text" name="user-name" id="name" required placeholder="Write Your Name"
-                            class="contact-input">
-                        <label for="name" class="contact-label">First Name</label>
-                    </div>
-
-                    <div class="contact-box">
-                        <input type="email" name="user-email" id="email" required placeholder="Write Your Email"
-                            class="contact-input">
-                        <label for="email" class="contact-label">Email Address</label>
-                    </div>
-
-                    <div class="contact-box contact-area">
-                        <textarea name="user-message" id="message" required placeholder="Write Your Message"
-                            class="contact-input"></textarea>
-                        <label for="message" class="contact-label">Message</label>
-                    </div>
-
-                    <p class="contact-message" id="contact-message">Message status</p>
-                    <button onclick="Sendemail">Send Message</button>
-                </div>
-            </form>
+  <div class="contact-page container grid">
+    <!-- NOTE: form has id="contact-form" so sendForm can use it OR we can use send() -->
+    <form action="" class="contact-form grid" id="contact-form">
+      <div class="contact-group grid">
+        <div class="contact-box">
+          <input type="text" name="from_name" id="name" required placeholder="Write Your Name"
+                 class="contact-input">
+          <label for="name" class="contact-label">First Name</label>
         </div>
-    </section>
+
+        <div class="contact-box">
+          <input type="email" name="reply_to" id="email" required placeholder="Write Your Email"
+                 class="contact-input">
+          <label for="email" class="contact-label">Email Address</label>
+        </div>
+
+        <div class="contact-box contact-area">
+          <textarea name="message" id="message" required placeholder="Write Your Message"
+                    class="contact-input"></textarea>
+          <label for="message" class="contact-label">Message</label>
+        </div>
+
+        <p class="contact-message" id="contact-message" aria-live="polite"></p>
+
+        <!-- Use type="submit" and handle submit in JS -->
+        <button type="submit" id="send-button" class="contact-send btn">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- SCRIPTS: load EmailJS first, then your scripts -->
+<!-- Use v4 EmailJS browser library -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // initialize with your public key (replace with your public key)
+  emailjs.init('YOUR_PUBLIC_KEY_HERE'); // e.g. ebnziiJkiOu7-iK4G
+</script>
+
+<!-- Your other site scripts -->
+<script src="js/index.js"></script>
+<script src="js/contact.js"></script>
+
 
 
     <!-- ============FOOTER============= -->
